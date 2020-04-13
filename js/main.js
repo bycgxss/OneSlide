@@ -212,7 +212,7 @@ const Theme = {
     location.reload()
   },
   loadTheme() {
-    let theme = localStorage.theme || 'beige'
+    let theme = localStorage.theme || 'blood'
     let $link = document.createElement('link')
     $link.rel =  `stylesheet`
     $link.href = `css/theme/${theme}.css`
