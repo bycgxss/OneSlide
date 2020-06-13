@@ -151,7 +151,37 @@ const Editor = {
     this.$editInput = $('.editor textarea')
     this.$saveBtn = $('.editor .button-save')
     this.$slideContainer = $('.slides')
-    this.markdown = localStorage.markdown || `# one slide`
+    this.markdown = localStorage.markdown || `
+# 3s-slide
+
+温馨提示：
+
+请点击屏幕左上角进入设置界面
+
+或按方向 > 键，进入下一页
+
+## 功能介绍
+
+1. 支持 Markdown 大部分语法
+2. 支持主题切换
+3. 支持特效切换
+4.支持一键导出PDF
+5.支持演讲者模式
+
+点击方向 下 键进入使用说明页
+
+### 使用说明
+
+- 在设置界面编辑页中，编写 Markdown 语法规则文章
+
+- 一级标题为首页标题。
+
+- 二级标题为左右分页，按左右方向键切换
+
+- 三级四级标题为上下分页，按上下方向键切换
+
+## 感谢你的使用，再见
+    `
     this.bind()
     this.start()
   },
@@ -169,7 +199,7 @@ const Editor = {
           progress: true,
           center: localStorage.align === 'left-top' ? false : true,
           hash: true,
-          transition: localStorage.transition || 'slide', // none/fade/slide/convex/concave/zoom
+          transition: localStorage.transition || 'convex', // none/fade/slide/convex/concave/zoom
           // More info https://github.com/hakimel/reveal.js#dependencies
           dependencies: [
             { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
