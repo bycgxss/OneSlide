@@ -152,7 +152,7 @@ const Editor = {
     this.$saveBtn = $('.editor .button-save')
     this.$slideContainer = $('.slides')
     this.markdown = localStorage.markdown || `
-# 3s-slide
+# 即刻 PPT
 
 温馨提示：
 
